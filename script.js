@@ -1,3 +1,4 @@
+(()=>{
 servicesChange = ({ target }) => {
 	document.querySelector(".services .icon.active").classList.remove("active");
 	let element = target.closest(".icon");
@@ -214,3 +215,4 @@ document.querySelectorAll('header .link').forEach(item=>{
 		to.scrollIntoView({behavior:'smooth'})
 	})
 })
+})()
