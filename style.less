@@ -6,6 +6,7 @@
 @font-face {
 	font-family: "BigJohn";
 	src: url("fonts/BIG JOHN.otf") format("opentype");
+	font-display: swap;
 }
 
 body {
@@ -37,7 +38,7 @@ body {
 
 header {
 	grid-area: header;
-	background-image: url("IMG/header-bg.jpg");
+	// background-image: url("IMG/header-bg.jpg");
 	background-size: cover;
 	display: grid;
 	grid-template-columns: 1fr 1170px 1fr;
@@ -112,6 +113,7 @@ header {
 
 	.about-wraper {
 		grid-column-start: 2;
+		width: 100%;
 	}
 
 	.left {
@@ -316,20 +318,20 @@ h3 {
 			}
 		}
 		.label {
-			background-image: url("IMG/label.jpg");
+			// background-image: url("IMG/label.jpg");
 		}
 		.vintage {
-			background-image: url("IMG/vintage.jpg");
+			// background-image: url("IMG/vintage.jpg");
 		}
 		.branding {
-			background-image: url("IMG/branding.jpg");
+			// background-image: url("IMG/branding.jpg");
 		}
 	}
 
 	.bot {
 		display: grid;
 		grid-template-columns: 1fr 1030px 1fr;
-		background-image: url("IMG/project-bg.jpg");
+		// background-image: url("IMG/project-bg.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 
@@ -476,7 +478,7 @@ h3 {
 	grid-area: impressed;
 	grid-template-columns: 1fr 600px 570px 1fr;
 	display: grid;
-	background-image: url(IMG/impressed-bg.jpg);
+	// background-image: url(IMG/impressed-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -616,9 +618,9 @@ h3 {
 				background-color: transparent;
 				transition-duration: 0.3s;
 			}
-			img {
-				width: 270px;
-				position: relative;
+			picture {
+				// width: 270px;
+				// position: relative;
 			}
 			.description {
 				position: absolute;
@@ -684,7 +686,7 @@ h3 {
 	.bot {
 		grid-column-start: 2;
 		grid-row-start: 5;
-		background-image: url(IMG/portfolio-bg.jpg);
+		// background-image: url(IMG/portfolio-bg.jpg);
 		background-size: cover;
 		display: flex;
 		justify-content: center;
@@ -951,7 +953,7 @@ input[type="radio"]:checked + label:after {
 
 .team-cta {
 	grid-area: team-cta;
-	background-image: url(IMG/team-bg.jpg);
+	// background-image: url(IMG/team-bg.jpg);
 	background-size: cover;
 	text-align: center;
 
@@ -1017,7 +1019,7 @@ input[type="radio"]:checked + label:after {
 	display: grid;
 	grid-template-columns: 1fr 70px 1100px 1fr;
 	grid-template-rows: 172px 180px 235px 1fr;
-	background-image: url("IMG/blog-bg.jpg");
+	// background-image: url("IMG/blog-bg.jpg");
 	background-size: cover;
 	transition-duration: 1s;
 	z-index: 2;
@@ -1124,6 +1126,7 @@ input[type="radio"]:checked + label:after {
 					height: 235px;
 					font-size: 20px;
 					color: @grey-font;
+					text-align: center;
 
 					.green {
 						font-family: "Source Sans Pro", sans-serif;
@@ -1142,7 +1145,7 @@ input[type="radio"]:checked + label:after {
 .subscribe {
 	grid-area: subscribe;
 	background-size: cover;
-	background-image: url("IMG/subscribe-bg.jpg");
+	// background-image: url("IMG/subscribe-bg.jpg");
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1362,17 +1365,20 @@ footer {
 		.photos {
 			column-count: 3;
 
-			.photo:nth-child(4) > img {
+			.photo:nth-child(4) > picture > img,
+			.photo:nth-child(4) > picture {
 				height: 259px;
 				width: 100%;
 				object-fit: cover;
 			}
-			.photo:nth-child(6) > img {
+			.photo:nth-child(6) > picture > img,
+			.photo:nth-child(6) > picture {
 				height: 219px;
 				width: 100%;
 				object-fit: cover;
 			}
-			.photo:nth-child(8) > img {
+			.photo:nth-child(8) > picture > img,
+			.photo:nth-child(8) > picture{
 				height: 324px;
 				width: 100%;
 				object-fit: cover;
@@ -1438,9 +1444,12 @@ footer {
 
 		.photos {
 			column-count: 2;
-			.photo:nth-child(4) > img,
-			.photo:nth-child(6) > img,
-			.photo:nth-child(8) > img {
+			.photo:nth-child(4) > picture > img,
+			.photo:nth-child(6) > picture > img,
+			.photo:nth-child(8) > picture > img,
+			.photo:nth-child(4) > picture,
+			.photo:nth-child(6) > picture,
+			.photo:nth-child(8) > picture{
 				height: unset;
 				width: unset;
 				object-fit: unset;

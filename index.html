@@ -4,21 +4,16 @@
 		<meta charset="UTF-8" />
 		<title>BOUNCY</title>
 		<link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300"
-			rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet" />
 		<link rel="stylesheet" href="normalize.css" />
 		<link rel="stylesheet" href="style.css" />
 		<meta name="viewport" content="width=device-width" />
+		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
 	</head>
 	<body>
 		<div class="wraper">
-			<header>
+			<header class="background lazy" data-bg="url(IMG_WEBP/header-bg.webp)">
 				<div class="nav-bar">
 					<div class="logo">BOUNCY</div>
 					<nav>
@@ -34,76 +29,71 @@
 				<div class="center">
 					<h1>WE ARE CODE CAFE</h1>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium voluptatum
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
 					</p>
 				</div>
-				<img
-					data-to="about"
-					src="IMG/arrow-down.png"
-					alt=""
-					class="arrow-down link"
-				/>
+				<picture class="arrow-down link">
+					<source type="image/webp" data-srcset="IMG_WEBP/arrow-down.webp" />
+					<img alt="" class="link lazy" data-src="IMG/arrow-down.png" data-to="about" />
+				</picture>
 			</header>
 			<div id="about" class="about">
 				<div class="about-wraper">
 					<div class="left">
 						<h2>THIS IS BOUNCY</h2>
 						<p class="text">
-							At vero eos et accusamus et iusto odio dignissimos
-							ducimus qui blanditiis praesentium voluptatum
-							deleniti atque corrupti quos dolores et quas
-							molestias excepturi sint occaecati cupiditate non
-							provident, similique sunt in culpa qui officia
-							deserunt mollitia animi, id est laborum et dolorum
-							fuga. Et harum quidem rerum facilis est et expedita
-							distinctio.
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+							excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum
+							quidem rerum facilis est et expedita distinctio.
 						</p>
 						<button>Read More</button>
 					</div>
-					<img src="IMG/phone.jpg" alt="" />
+
+					<picture>
+						<source type="image/webp" data-srcset="IMG_WEBP/phone.webp" />
+						<img alt="" class="lazy" data-src="IMG/phone.jpg" />
+					</picture>
 				</div>
 			</div>
 			<div id="aboutDetail" class="details-about">
 				<div class="top">
 					<h2>DETAILS ABOUT BOUNCY</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					</p>
 					<div class="icons">
 						<div class="icon heart select">
-							<img src="IMG/heart.png" alt="" />
+							<picture>
+								<source type="image/webp" data-srcset="IMG_WEBP/heart.webp" />
+								<img alt="" class="lazy" data-src="IMG/heart.png" />
+							</picture>
 						</div>
 						<div class="icon mouse">
-							<img src="IMG/mouse.png" alt="" />
+							<picture>
+								<source type="image/webp" data-srcset="IMG_WEBP/mouse.webp" />
+								<img alt="" class="lazy" data-src="IMG/mouse.png" />
+							</picture>
 						</div>
 						<div class="icon bulb">
-							<img src="IMG/bulb.png" alt="" />
+							<picture>
+								<source type="image/webp" data-srcset="IMG_WEBP/bulb.webp" />
+								<img alt="" class="lazy" data-src="IMG/bulb.png" />
+							</picture>
 						</div>
 					</div>
 				</div>
 				<div class="center"><h3>Creative Ideas</h3></div>
 				<div class="left">
 					<p class="text">
-						At <span class="green">vero</span> eos et accusamus et
-						iusto odio dignissimos
-						<span class="dark">ducimus</span> qui blanditiis
-						praesentium voluptatum deleniti atque corrupti quos
-						dolores
+						At <span class="green">vero</span> eos et accusamus et iusto odio dignissimos <span class="dark">ducimus</span> qui blanditiis praesentium voluptatum
+						deleniti atque corrupti quos dolores
 					</p>
 				</div>
 				<div class="right">
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium voluptatum deleniti
-						atque
-						<span class="dark">corrupti quos</span> dolores et quas
-						molestias <span class="green">excepturi</span> sint
-						occaecati cupiditate non provident,
-						<span class="dark">similique</span> sunt in culpa qui
-						officia deserunt mollitia animi, id est laborum et
-						dolorum fuga. Et harum quidem r
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+						<span class="dark">corrupti quos</span> dolores et quas molestias <span class="green">excepturi</span> sint occaecati cupiditate non provident,
+						<span class="dark">similique</span> sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem r
 					</p>
 				</div>
 			</div>
@@ -111,27 +101,23 @@
 				<div class="top">
 					<h2>FEATURED PROJECTS</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					</p>
 				</div>
 				<div class="section middle">
-					<div class="section label">
+					<div class="section label background lazy" data-bg="url(IMG_WEBP/label.webp)">
 						<div class="title">LABEL</div>
 					</div>
-					<div class="section vintage">
+					<div class="section vintage background lazy" data-bg="url(IMG_WEBP/vintage.webp)">
 						<div class="title">VINTAGE</div>
 					</div>
-					<div class="section branding">
+					<div class="section branding background lazy" data-bg="url(IMG_WEBP/branding.webp)">
 						<div class="title">BRANDING</div>
 					</div>
 				</div>
-				<div class="bot">
+				<div class="bot background lazy" data-bg="url(IMG_WEBP/project-bg.webp)">
 					<div class="wraper">
-						<p>
-							At vero eos et <b>accusamus</b> et iusto odio
-							dignissimos ducimus qui blanditiis
-						</p>
+						<p>At vero eos et <b>accusamus</b> et iusto odio dignissimos ducimus qui blanditiis</p>
 						<button>Submit Now</button>
 					</div>
 				</div>
@@ -140,65 +126,45 @@
 				<div class="top">
 					<h2>OUR SERVICES</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					</p>
 				</div>
 				<div class="icons">
-					<div
-						class="icon service active"
-						data-header="Service"
-						data-first="80"
-						data-second="90"
-						data-third="60"
-					>
-						<img src="IMG/service-icon.png" alt="" />
+					<div class="icon service active" data-header="Service" data-first="80" data-second="90" data-third="60">
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/service-icon.webp" />
+							<img alt="" class="lazy" data-src="IMG/service-icon.png" />
+						</picture>
 					</div>
-					<div
-						class="icon graphic"
-						data-header="Graphic Design"
-						data-first="90"
-						data-second="75"
-						data-third="70"
-					>
-						<img src="IMG/graphic-icon.png" alt="" />
+					<div class="icon graphic" data-header="Graphic Design" data-first="90" data-second="75" data-third="70">
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/graphic-icon.webp" />
+							<img alt="" class="lazy" data-src="IMG/graphic-icon.png" />
+						</picture>
 					</div>
-					<div
-						class="icon game"
-						data-header="Game Design"
-						data-first="70"
-						data-second="70"
-						data-third="75"
-					>
-						<img src="IMG/game-icon.png" alt="" />
+					<div class="icon game" data-header="Game Design" data-first="70" data-second="70" data-third="75">
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/game-icon.webp" />
+							<img alt="" class="lazy" data-src="IMG/game-icon.png" />
+						</picture>
 					</div>
-					<div
-						class="icon support"
-						data-header="Support"
-						data-first="95"
-						data-second="90"
-						data-third="85"
-					>
-						<img src="IMG/support-icon.png" alt="" />
+					<div class="icon support" data-header="Support" data-first="95" data-second="90" data-third="85">
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/support-icon.webp" />
+							<img alt="" class="lazy" data-src="IMG/support-icon.png" />
+						</picture>
 					</div>
 				</div>
 				<div class="options">
-					<!-- <div class="desrcriptions"> -->
 					<h3>Service</h3>
 					<p class="text">
 						At vero eos et accusamus et
-						<span class="green">iusto</span> odio dignissimos
-						<span class="dark">ducimus</span> qui blanditiis
-						praesentium voluptatum deleniti
+						<span class="green">iusto</span> odio dignissimos <span class="dark">ducimus</span> qui blanditiis praesentium voluptatum deleniti
 					</p>
 					<p class="text">
-						quos dolores et quas molestias excepturi sint occaecati
-						cupiditate non provident,
-						<span class="green">similique sunt</span> in culpa qui
-						officia deserunt mollitia animi, id est laborum et
-						dolorum fuga.
+						quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+						<span class="green">similique sunt</span> in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
 					</p>
-					<!-- </div> -->
 				</div>
 				<div class="graphs">
 					<div class="wrap">
@@ -224,13 +190,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="impressed">
+			<div class="impressed background lazy" data-bg="url(IMG_WEBP/impressed-bg.webp)">
 				<div class="left">
 					<h2>IMPRESSED?</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium voluptatum deleniti
-						atque corrupti quos dolores et quas molestias
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
 					</p>
 					<p>
 						<b>- ABDULLAHAN NOMAN</b><br />
@@ -238,15 +202,19 @@
 						<span class="green">CODE CAFE</span>
 					</p>
 				</div>
-				<div class="right"><img src="IMG/monitor.png" alt="" /></div>
+				<div class="right">
+					<picture>
+						<source type="image/webp" data-srcset="IMG_WEBP/monitor.webp" />
+						<img alt="" class="lazy" data-src="IMG/monitor.png" />
+					</picture>
+				</div>
 			</div>
 			<div id="portfolio" class="portfolio">
 				<div class="top">
 					<div class="header">
 						<h2>THE PORTFOLIO</h2>
 						<p class="text">
-							At vero eos et accusamus et iusto odio dignissimos
-							ducimus qui blanditiis praesentium
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 						</p>
 					</div>
 				</div>
@@ -261,296 +229,320 @@
 				</div>
 				<div class="photos">
 					<div class="photo">
-						<img src="IMG/photos/1.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/1.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/1.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/2.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/2.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/2.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/3.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/3.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/3.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/4.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/4.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/4.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 								v>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/5.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/5.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/5.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/6.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/6.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/6.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/7.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/7.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/7.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/8.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/8.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/8.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/9.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/9.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/9.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/10.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/10.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/10.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/11.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/11.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/11.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="photo">
-						<img src="IMG/photos/12.jpg" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/photos/12.webp" />
+							<img alt="" class="lazy" data-src="IMG/photos/12.jpg" />
+						</picture>
 						<div class="description">
 							<h2>TITLE HERE</h2>
 							<p class="text">
-								At vero eos et accusamus et iusto odio
-								dignissimos ducimus qui blanditiis praesentium
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 							</p>
 							<div class="icons">
 								<div class="link">
-									<img
-										src="IMG/photos/icons/link.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/link.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/link.png" />
+									</picture>
 								</div>
 								<div class="like">
-									<img
-										src="IMG/photos/icons/heart.png"
-										alt=""
-									/>
+									<picture>
+										<source type="image/webp" data-srcset="IMG_WEBP/photos/icons/heart.webp" />
+										<img alt="" class="lazy" data-src="IMG/photos/icons/heart.png" />
+									</picture>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="bot">
+				<div class="bot background lazy" data-bg="url(IMG_WEBP/portfolio-bg.webp)">
 					<p class="text">
 						At vero eos et <b>accusamus</b> et iusto odio
 						<b>dignissimos</b>
@@ -563,58 +555,57 @@
 				<div class="top">
 					<h2>THE TEAM</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					</p>
 				</div>
 				<div class="middle">
 					<div class="photo">
 						<div class="wrap">
-							<img src="IMG/person1.jpg" alt="" />
+							<picture>
+								<source type="image/webp" data-srcset="IMG_WEBP/person1.webp" />
+								<img alt="" class="lazy" data-src="IMG/person1.jpg" />
+							</picture>
 						</div>
 						<div class="cover">
-							<img src="IMG/logo-inst.png" alt="" />
-							<img src="IMG/logo-fb.png" alt="" />
-							<img src="IMG/logo-tw.png" alt="" />
+							<picture>
+								<source type="image/webp" data-srcset="IMG_WEBP/logo-inst.webp" />
+								<img alt="" class="lazy" data-src="IMG/logo-inst.png" />
+							</picture>
+
+							<picture>
+								<source type="image/webp" data-srcset="IMG_WEBP/logo-fb.webp" />
+								<img alt="" class="lazy" data-src="IMG/logo-fb.png" />
+							</picture>
+
+							<picture>
+								<source type="image/webp" data-srcset="IMG_WEBP/logo-tw.webp" />
+								<img alt="" class="lazy" data-src="IMG/logo-tw.png" />
+							</picture>
 						</div>
 					</div>
 					<div class="info">
 						<h3>Abdullah Noman</h3>
 						<i>CREATIVE DIRECTOR, CODE CAFE</i>
 						<p class="text">
-							At vero eos et accusamus et iusto odio dignissimos
-							ducimus qui blanditiis praesentium
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 						</p>
 						<div class="bars">
 							<div class="progress">
 								<span>BRANDING</span><a>80%</a>
-								<progress
-									id="first"
-									value="0"
-									max="100"
-								></progress>
+								<progress id="first" value="0" max="100"></progress>
 							</div>
 							<div class="progress">
 								<span>WEBDESIGN</span><a>70%</a>
-								<progress
-									id="second"
-									value="0"
-									max="100"
-								></progress>
+								<progress id="second" value="0" max="100"></progress>
 							</div>
 							<div class="progress">
 								<span>USER INTERFACE</span><a>90%</a>
-								<progress
-									id="third"
-									value="0"
-									max="100"
-								></progress>
+								<progress id="third" value="0" max="100"></progress>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="bottom">
-					<!-- <div class="switch"> -->
 					<input
 						id="rfirst"
 						type="radio"
@@ -655,10 +646,9 @@
 						hidden
 					/>
 					<label for="rthird"></label>
-					<!-- </div> -->
 				</div>
 			</div>
-			<div class="team-cta">
+			<div class="team-cta background lazy" data-bg="url(IMG_WEBP/team-bg.webp)">
 				<p class="text">
 					Already Loved Us? Let’s talk!
 				</p>
@@ -668,20 +658,19 @@
 				<div class="top">
 					<h2>TESTIMONIALS</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					</p>
 				</div>
 				<div class="review">
 					<div class="photo">
-						<img src="IMG/review/person1.png" alt="" />
+						<picture>
+							<source type="image/webp" data-srcset="IMG_WEBP/review/person1.webp" />
+							<img alt="" class="lazy" data-src="IMG/review/person1.png" />
+						</picture>
 					</div>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium voluptatum deleniti
-						atque corrupti quos dolores et quas molestias excepturi
-						sint occaecati cupiditate non provident, similique sunt
-						in culpa qui officia deserunt mollitia.
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+						excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
 					</p>
 					<div class="name">
 						<b><span class="green">PARTHO</span></b>
@@ -690,46 +679,20 @@
 						</p>
 					</div>
 					<div class="radios">
-						<input
-							id="rfirstRev"
-							type="radio"
-							name="radioRev"
-							data-person="1"
-							data-name="PARTHO"
-							data-position="FOUNDER, ARTWAYS BD"
-							checked
-							hidden
-						/>
+						<input id="rfirstRev" type="radio" name="radioRev" data-person="1" data-name="PARTHO" data-position="FOUNDER, ARTWAYS BD" checked hidden />
 						<label for="rfirstRev"></label>
-						<input
-							id="rsecondRev"
-							type="radio"
-							name="radioRev"
-							data-person="2"
-							data-name="DEVELOPER"
-							data-position="FOUNDER, COMPANY"
-							hidden
-						/>
+						<input id="rsecondRev" type="radio" name="radioRev" data-person="2" data-name="DEVELOPER" data-position="FOUNDER, COMPANY" hidden />
 						<label for="rsecondRev"></label>
-						<input
-							id="rthirdRev"
-							type="radio"
-							name="radioRev"
-							data-person="3"
-							data-name="CEO"
-							data-position="FOUNDER, EXAMPLE"
-							hidden
-						/>
+						<input id="rthirdRev" type="radio" name="radioRev" data-person="3" data-name="CEO" data-position="FOUNDER, EXAMPLE" hidden />
 						<label for="rthirdRev"></label>
 					</div>
 				</div>
 			</div>
-			<div id="blog" class="blog">
+			<div id="blog" class="blog background lazy" data-bg="url(IMG_WEBP/blog-bg.webp)">
 				<div class="top">
 					<h2>LATEST NEWS</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					</p>
 				</div>
 				<div class="middle">
@@ -740,13 +703,9 @@
 				</div>
 				<div class="bottom">
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium voluptatum deleniti
-						atque corrupti quos dolores et quas molestias excepturi
-						sint occaecati cupiditate non provident, similique sunt
-						in culpa qui officia deserunt mollitia animi, id est
-						laborum et dolorum fuga. Et harum quidem rerum facilis
-						est et expedita distinctio...
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+						excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum
+						quidem rerum facilis est et expedita distinctio...
 					</p>
 					<button>+ Read More</button>
 				</div>
@@ -755,8 +714,7 @@
 				<div class="top">
 					<h2>OUR PRICE</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					</p>
 				</div>
 				<div class="bottom">
@@ -775,8 +733,7 @@
 					<div class="tariff">
 						<div class="tariff-wrap">
 							<p class="text">
-								Full Branding Project Management Unlimited
-								Revisions 24/7 h Service
+								Full Branding Project Management Unlimited Revisions 24/7 h Service
 							</p>
 							<div class="title">PROFESSIONAL</div>
 							<div class="tariff-price">
@@ -788,8 +745,7 @@
 					<div class="tariff">
 						<div class="tariff-wrap">
 							<p class="text">
-								Full Branding Project Management Unlimited
-								Revisions 24/7 h Service
+								Full Branding Project Management Unlimited Revisions 24/7 h Service
 								<br />Free Domain<br />
 								Free Hosting
 							</p>
@@ -803,11 +759,10 @@
 				</div>
 				<div class="bot"></div>
 			</div>
-			<div class="subscribe">
+			<div class="subscribe background lazy" data-bg="url(IMG_WEBP/subscribe-bg.webp)">
 				<h2>SUBSCRIBE US</h2>
 				<p class="text">
-					At vero eos et accusamus et iusto odio dignissimos ducimus
-					qui blanditiis praesentium
+					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 				</p>
 				<form>
 					<input type="text" placeholder="Email Address" />
@@ -818,18 +773,20 @@
 				<div class="top">
 					<h2>CONTACT US</h2>
 					<p class="text">
-						At vero eos et accusamus et iusto odio dignissimos
-						ducimus qui blanditiis praesentium
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					</p>
 					<div class="contact-details">
 						<div class="info">
 							<div class="pics">
-								<img src="IMG/contact/email.jpg" alt="" />
-								<img
-									class="icon"
-									src="IMG/contact/email-icon.png"
-									alt=""
-								/>
+								<picture>
+									<source type="image/webp" data-srcset="IMG_WEBP/contact/email.webp" />
+									<img alt="" class="lazy" data-src="IMG/contact/email.jpg" />
+								</picture>
+
+								<picture>
+									<source type="image/webp" data-srcset="IMG_WEBP/contact/email-icon.webp" />
+									<img alt="" class="icon lazy" data-src="IMG/contact/email-icon.png" />
+								</picture>
 							</div>
 							<h3>EMAIL</h3>
 							<p class="text">
@@ -839,12 +796,15 @@
 						</div>
 						<div class="info">
 							<div class="pics">
-								<img src="IMG/contact/address.jpg" alt="" />
-								<img
-									class="icon"
-									src="IMG/contact/address-icon.png"
-									alt=""
-								/>
+								<picture>
+									<source type="image/webp" data-srcset="IMG_WEBP/contact/address.webp" />
+									<img alt="" class="lazy" data-src="IMG/contact/address.jpg" />
+								</picture>
+
+								<picture>
+									<source type="image/webp" data-srcset="IMG_WEBP/contact/address-icon.webp" />
+									<img alt="" class="icon lazy" data-src="IMG/contact/address-icon.png" />
+								</picture>
 							</div>
 							<h3>OUR OFFICE</h3>
 							<p class="text">
@@ -854,12 +814,14 @@
 						</div>
 						<div class="info">
 							<div class="pics">
-								<img src="IMG/contact/phone.jpg" alt="" />
-								<img
-									class="icon"
-									src="IMG/contact/phone-icon.png"
-									alt=""
-								/>
+								<picture>
+									<source type="image/webp" data-srcset="IMG_WEBP/contact/phone.webp" />
+									<img alt="" class="lazy" data-src="IMG/contact/phone.jpg" />
+								</picture>
+								<picture>
+									<source type="image/webp" data-srcset="IMG_WEBP/contact/phone-icon.webp" />
+									<img alt="" class="icon lazy" data-src="IMG/contact/phone-icon.png" />
+								</picture>
 							</div>
 							<h3>PHONE</h3>
 							<p class="text">
@@ -891,11 +853,27 @@
 				<h4>BOUNCY</h4>
 				<p class="text">Copyright 2019 All right Reserved</p>
 				<div class="icons">
-					<img src="IMG/logo-fb.png" alt="" />
-					<img src="IMG/logo-tw.png" alt="" />
-					<img src="IMG/logo-inst.png" alt="" />
-					<img src="IMG/logo-in.png" alt="" />
-					<img src="IMG/logo-v.png" alt="" />
+					<picture>
+						<source type="image/webp" data-srcset="IMG_WEBP/logo-fb.webp" />
+						<img alt="" class="lazy" data-src="IMG/logo-fb.png" />
+					</picture>
+
+					<picture>
+						<source type="image/webp" data-srcset="IMG_WEBP/logo-tw.webp" />
+						<img alt="" class="lazy" data-src="IMG/logo-tw.png" />
+					</picture>
+					<picture>
+						<source type="image/webp" data-srcset="IMG_WEBP/logo-inst.webp" />
+						<img alt="" class="lazy" data-src="IMG/logo-inst.png" />
+					</picture>
+					<picture>
+						<source type="image/webp" data-srcset="IMG_WEBP/logo-in.webp" />
+						<img alt="" class="lazy" data-src="IMG/logo-in.png" />
+					</picture>
+					<picture>
+						<source type="image/webp" data-srcset="IMG_WEBP/logo-v.webp" />
+						<img alt="" class="lazy" data-src="IMG/logo-v.png" />
+					</picture>
 				</div>
 			</footer>
 		</div>
