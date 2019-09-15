@@ -1,4 +1,39 @@
 (()=>{
+let lazyLoadInstance = new LazyLoad({
+	elements_selector: ".lazy"
+});
+
+let hasWebP;
+
+(function check_webp_feature(feature, callback) {
+	var kTestImages = {
+		lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+		lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+		alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+		animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+	};
+	var img = new Image();
+	img.onload = function() {
+		var result = img.width > 0 && img.height > 0;
+		callback(feature, result);
+	};
+	img.onerror = function() {
+		callback(feature, false);
+	};
+	img.src = "data:image/webp;base64," + kTestImages[feature];
+})("lossy", (feature, res) => {
+	hasWebP = res;
+	if (!res) backgroundJpg();
+});
+const backgroundJpg = () => {
+	let backgrounds = document.querySelectorAll(".background");
+	backgrounds.forEach(element => {
+		console.log(element.dataset.bg);
+		element.dataset.bg = element.dataset.bg.replace("_WEBP", "");
+		element.dataset.bg = element.dataset.bg.replace("webp", "jpg");
+	});
+};
+
 servicesChange = ({ target }) => {
 	document.querySelector(".services .icon.active").classList.remove("active");
 	let element = target.closest(".icon");
@@ -153,7 +188,13 @@ changeProgress = (first, second, third) => {
 };
 
 changePerson = ({ target }) => {
+	if (hasWebP){
+		document.querySelector(".team picture source").srcset = `IMG_WEBP/person${target.dataset.person}.webp`;
+	} else {
 	document.querySelector(".team img").src = `IMG/person${target.dataset.person}.jpg`;
+
+	}
+
 	document.querySelector(".team h3").textContent = target.dataset.name;
 	document.querySelector(".team i").textContent = target.dataset.position;
 	document.querySelectorAll(".team a")[0].textContent = target.dataset.first + "%";
@@ -162,10 +203,14 @@ changePerson = ({ target }) => {
 	changeProgress(+target.dataset.first, +target.dataset.second, +target.dataset.third);
 };
 
+
+
 changeReviewer = ({ target }) => {
-	document.querySelector(".testimonials img").src = `IMG/review/person${
-		target.dataset.person
-	}.png`;
+	if (hasWebP) {
+		document.querySelector(".testimonials picture source").srcset = `IMG_WEBP/review/person${target.dataset.person}.webp`;
+	} else {
+		document.querySelector(".testimonials img").src = `IMG/review/person${target.dataset.person}.png`;
+	}
 	document.querySelector(".testimonials .green").textContent = target.dataset.name;
 	document.querySelector(".testimonials .bottom-text").textContent = target.dataset.position;
 };
@@ -210,7 +255,6 @@ document.querySelector('.map > .cover').addEventListener('click',({target})=>{
 
 document.querySelectorAll('header .link').forEach(item=>{
 	item.addEventListener('click',({target})=>{
-		// console.log(target)
 		let to=document.getElementById(target.dataset.to)
 		to.scrollIntoView({behavior:'smooth'})
 	})
